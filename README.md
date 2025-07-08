@@ -6,28 +6,28 @@ Tiempo aproximado de resolución 12 horas.
 ________________________________________
 ### Requisitos Funcionales
 1.	Configuración Dinámica de Mocks:
-o	Endpoint de Configuración:
+#### Endpoint de Configuración:
 Crea un endpoint POST /configure-mock que permita registrar nuevas configuraciones para mocks. La configuración deberá incluir:
-	Ruta: La URL que se utilizará para acceder al mock (por ejemplo, /api/v1/productos).
-	Método HTTP: GET, POST, PUT, DELETE, etc.
-	Parámetros de Entrada URL: Especifica si se espera que ciertos parámetros en la URL (fechaInicial=2021-01-29 13:01:00&fechaFinal=2021-01-29 13:06:00)
-	Parámetros de Entrada Body: Especifica si se espera en el cuerpo de la solicitud algún valor ("telefono": "45456060").
-	Encabezados: Especifica si se espera que ciertos parámetros en los headers de la solicitud (Authorization: Bearer xxxxxxxxxxxxxxx)
-	Código de Estado HTTP: El código de respuesta (200, 404, 500, etc.).
-	Contenido de la Respuesta: Los datos estáticos (o basados en plantillas) que se deben retornar.
-	Content-Type: El tipo de contenido que se retornará (por ejemplo, application/json, text/xml).
-2.	Ejecución del Mock:
-o	Endpoint Genérico para Mocks:
+Ruta: La URL que se utilizará para acceder al mock (por ejemplo, /api/v1/productos).
+Método HTTP: GET, POST, PUT, DELETE, etc.
+Parámetros de Entrada URL: Especifica si se espera que ciertos parámetros en la URL (fechaInicial=2021-01-29 13:01:00&fechaFinal=2021-01-29 13:06:00)
+Parámetros de Entrada Body: Especifica si se espera en el cuerpo de la solicitud algún valor ("telefono": "45456060").
+Encabezados: Especifica si se espera que ciertos parámetros en los headers de la solicitud (Authorization: Bearer xxxxxxxxxxxxxxx)
+Código de Estado HTTP: El código de respuesta (200, 404, 500, etc.).
+Contenido de la Respuesta: Los datos estáticos (o basados en plantillas) que se deben retornar.
+Content-Type: El tipo de contenido que se retornará (por ejemplo, application/json, text/xml).
+#### Ejecución del Mock:
+Endpoint Genérico para Mocks:
 Todos los endpoints configurados deben ser “escuchados” por la API. Es decir, cuando se haga una solicitud a una ruta que coincida con alguna configuración:
-	La API deberá buscar la configuración correspondiente.
-	Verificar que el método HTTP y, en caso de ser necesario, los parámetros (en la URL, en el cuerpo o en los headers) coincidan con lo definido.
-	Devolver la respuesta configurada, con el código de estado y el encabezado Content-Type indicados.
-o	Si la solicitud no coincide con ninguna configuración, retornar un 404 Not Found con un mensaje adecuado.
-3.	Gestión de Configuraciones:
-o	Permite visualizar, actualizar y eliminar configuraciones existentes (por ejemplo, a través de endpoints como GET /configure-mock o DELETE /configure-mock/:id).
-4.	Consideraciones sobre Variaciones:
-o	La configuración debe poder admitir variaciones según los parámetros recibidos. Por ejemplo, si un parámetro usuario=admin está presente, retornar una respuesta distinta a cuando no lo esté.
-o	Se valorará la capacidad de implementar lógica condicional o utilizar plantillas para generar respuestas dinámicas.
+La API deberá buscar la configuración correspondiente.
+Verificar que el método HTTP y, en caso de ser necesario, los parámetros (en la URL, en el cuerpo o en los headers) coincidan con lo definido.
+Devolver la respuesta configurada, con el código de estado y el encabezado Content-Type indicados.
+Si la solicitud no coincide con ninguna configuración, retornar un 404 Not Found con un mensaje adecuado.
+#### Gestión de Configuraciones:
+Permite visualizar, actualizar y eliminar configuraciones existentes (por ejemplo, a través de endpoints como GET /configure-mock o DELETE /configure-mock/:id).
+#### Consideraciones sobre Variaciones:
+La configuración debe poder admitir variaciones según los parámetros recibidos. Por ejemplo, si un parámetro usuario=admin está presente, retornar una respuesta distinta a cuando no lo esté.
+Se valorará la capacidad de implementar lógica condicional o utilizar plantillas para generar respuestas dinámicas.
 ________________________________________
 ### Requisitos Técnicos
 •	Lenguaje y Framework:
