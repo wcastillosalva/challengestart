@@ -1,12 +1,10 @@
-# challengestart
-Challenge Start 2025
-
-Challenge: API para Mocks de Servicios REST
-Contexto
+# Challenge Start 2025
+## API para Mocks de Servicios REST
+### Contexto
 En proyectos de desarrollo de software es muy común tener que simular el comportamiento de servicios externos mediante mocks, lo cual facilita el desarrollo y las pruebas de sistemas que dependen de ellos. El objetivo de este challenge es que desarrolles una API que permita definir y gestionar mocks de endpoints. La API deberá devolver respuestas personalizadas según la configuración especificada, teniendo en cuenta la ruta, el método HTTP, y parámetros enviados en la URL, en el cuerpo de la solicitud o en los headers así como variaciones en el Content-Type.
 Tiempo aproximado de resolución 12 horas.
 ________________________________________
-Requisitos Funcionales
+### Requisitos Funcionales
 1.	Configuración Dinámica de Mocks:
 o	Endpoint de Configuración:
 Crea un endpoint POST /configure-mock que permita registrar nuevas configuraciones para mocks. La configuración deberá incluir:
@@ -31,7 +29,7 @@ o	Permite visualizar, actualizar y eliminar configuraciones existentes (por ejem
 o	La configuración debe poder admitir variaciones según los parámetros recibidos. Por ejemplo, si un parámetro usuario=admin está presente, retornar una respuesta distinta a cuando no lo esté.
 o	Se valorará la capacidad de implementar lógica condicional o utilizar plantillas para generar respuestas dinámicas.
 ________________________________________
-Requisitos Técnicos
+### Requisitos Técnicos
 •	Lenguaje y Framework:
 Puedes utilizar el lenguaje y framework de tu preferencia (por ejemplo, Node.js con Express, Python con Flask o FastAPI, etc.).
 •	Documentación:
@@ -47,10 +45,10 @@ o	(Opcional) Implementa pruebas unitarias para demostrar la robustez de tu soluc
 o	Sube el proyecto a un repositorio público (por ejemplo, GitHub).
 o	Incluye instrucciones claras para probar la aplicación.
 ________________________________________
-Bonus (Opcionales)
+### Bonus (Opcionales)
 •	Utiliza tu creatividad para agregar funcionalidades extra que creas puedan agregar valor a la solucion.
 ________________________________________
-Puntos a Evaluar
+### Puntos a Evaluar
 •	Diseño y Arquitectura:
 Claridad en la separación de responsabilidades y modularidad del código.
 •	Funcionalidad:
@@ -61,6 +59,8 @@ Legibilidad, uso correcto de patrones de diseño y buenas prácticas en general.
 Calidad y claridad en la documentación, así como la existencia de pruebas unitarias.
 •	Creatividad y Extensibilidad:
 La implementación de características adicionales (bonus) y la facilidad para ampliar el proyecto.
+•	Uso de herramientas de IA:
+Como aplicaste tus conocimientos en el uso de las herramientas de IA para acelear tu desarrollo, coloca en el README prompts utilizados
 ________________________________________
 ¡Buena suerte y esperamos ver soluciones creativas y robustas!
 
